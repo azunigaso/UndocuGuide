@@ -11,7 +11,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\onboarding1.svg" />
+    <None Remove="Images\onboarding2.svg" />
+    <None Remove="Images\onboarding3.svg" />
+    <None Remove="Images\onboarding4.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\onboarding1.svg" />
+    <EmbeddedResource Include="Images\onboarding2.svg" />
+    <EmbeddedResource Include="Images\onboarding3.svg" />
+    <EmbeddedResource Include="Images\onboarding4.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PropertyChanged.Fody" Version="3.2.7" />
+    <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
+    <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.3.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="VIewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\OnboardingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
