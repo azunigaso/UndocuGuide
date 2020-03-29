@@ -35,11 +35,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="VIewModels\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="Views\OnboardingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\WalkthroughItemPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

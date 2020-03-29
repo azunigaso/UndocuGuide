@@ -2,14 +2,43 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:gradient="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              x:Class="UndocuGuide.Views.OnboardingPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <gradient:PancakeView 
+                Grid.RowSpan="3"
+                BackgroundGradientStartColor="#5803ce" 
+                BackgroundGradientEndColor="#3691dd"/>
+
+            <Button
+                Grid.Row="0"
+                Margin="0,10,10,0"
+                BackgroundColor="Transparent"
+                HorizontalOptions="End"
+                Text="Skip"
+                TextColor="White"/>
+
+            <CarouselView Grid.Row="1" BackgroundColor="Gray"/>
+
+            <Button 
+                Grid.Row="2"
+                Margin="0,10,0,24"
+                BackgroundColor="White"
+                CornerRadius="20"
+                HeightRequest="40"
+                HorizontalOptions="CenterAndExpand"
+                Text="Next"
+                WidthRequest="245"/>
+            
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
